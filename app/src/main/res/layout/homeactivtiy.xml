@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/newdashboard"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mytollbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#403d52"
+        app:titleTextColor="#ffffff"
+        app:title="لیست روزانه"
+        >
+        <TextView
+            android:id="@+id/tv_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="خوش آمدی"
+            android:padding="7dp"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_marginStart="40dp"
+            android:background="@drawable/btn_addlist_layout"
+            android:textColor="#000000"
+            android:fontFamily="arial"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="639dp"
+        android:layout_marginTop="50dp">
+    </androidx.viewpager.widget.ViewPager>
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/hometabs"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/tabs"
+        android:padding="5dp"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="#ffffff"
+        app:tabTextColor="#353941">
+    </com.google.android.material.tabs.TabLayout>
+</RelativeLayout>

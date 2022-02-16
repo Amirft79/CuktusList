@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#19181B</color>
+    <color name="colorAccent">#0F1211</color>
+    <color name="textcolor">#ffffff</color>
+    <color name="Buttoncolor">#373737</color>
+    <color name="btnaddlsit">#596B6C</color>
+    <color name="dialogback">#595555</color>
+    <color name="recyclerview">#323447</color>
+</resources>

@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">CuktusList</string>
+    <string name="cuktuslist">CuktusList</string>
+    <string name="addlist">اضافه کردن برنامه</string>
+    <string name="addlist1">اضافه کردن برنامه</string>
+    <string name="todo">TODO</string>
+    <string name="dailyjob">برنامه روزانه</string>
+    <string name="submit">ثبت برنامه</string>
+    <string name="instructions">توضیحات</string>
+    <string name="plan">برنامه</string>
+    <string name="delete">حذف برنامه</string>
+    <string name="update">تغییر برنامه</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="done">انجام میشود</string>
+    <string name="_99_6_26">99/6/26 چهارشنبه</string>
+    <string name="mydashbord">تنظیمات</string>
+    <string name="username">نام کاربر</string>
+    <string name="save">ذخیره</string>
+    <string name="program">برنامه</string>
+    <string name="text">برنامه هاتو اینجا بنویس ونگهشون داروانجام بده</string>
+</resources>
