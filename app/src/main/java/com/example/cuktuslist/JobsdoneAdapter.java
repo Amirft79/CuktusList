@@ -1,5 +1,6 @@
 package com.example.cuktuslist;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.ContentValues;
@@ -68,6 +69,7 @@ public class JobsdoneAdapter extends RecyclerView.Adapter<JobsdoneAdapter.JobsHo
                     public void onClick(View view) {
                         menu.show();
                         menu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                            @SuppressLint("NotifyDataSetChanged")
                             @Override
                             public boolean onMenuItemClick(MenuItem menuItem) {
                                 if (menuItem.getItemId()==R.id.delete_item){

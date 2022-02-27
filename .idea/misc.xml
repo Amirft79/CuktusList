@@ -4,6 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidProjects/CuktusList/app/src/main/res/layout/activity_loading.xml" value="0.1" />
+        <entry key="..\:/AndroidProjects/CuktusList/app/src/main/res/layout/homeactivtiy.xml" value="0.1828125" />
+        <entry key="..\:/AndroidProjects/CuktusList/app/src/main/res/layout/insertlist_dialog_layout.xml" value="0.1828125" />
+        <entry key="..\:/AndroidProjects/CuktusList/app/src/main/res/layout/recyclerview_adapter_layout.xml" value="0.22" />
+        <entry key="..\:/AndroidProjects/CuktusList/app/src/main/res/layout/tabs_layout.xml" value="0.4466666666666667" />
+        <entry key="..\:/AndroidProjects/CuktusList/app/src/main/res/layout/username_layout.xml" value="0.1828125" />
+        <entry key="..\:/AndroidProjects/CuktusList/app/src/main/res/layout/writelist_layout.xml" value="0.14666666666666667" />
       </map>
     </option>
   </component>

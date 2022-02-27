@@ -1,44 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="wrap_content"
     android:layout_centerInParent="true"
     android:id="@+id/task"
+    android:clickable="true"
     android:layout_margin="10dp"
     app:cardBackgroundColor="#d1e4ff"
-    app:cardCornerRadius="10dp">
+    app:cardElevation="16dp"
+    app:cardCornerRadius="20dp">
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="372dp"
         android:layout_height="wrap_content">
+
 
         <TextView
             android:id="@+id/tv_listitem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:gravity="start"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
             android:text="do dishess"
             android:textColor="#000000"
             android:textSize="16sp"
-            android:textStyle="bold">
-        </TextView>
-
-
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
 
         <TextView
             android:id="@+id/tv_ins"
             android:layout_width="212dp"
             android:layout_height="53dp"
+            android:text="listdescriotions"
             android:textColor="#423E3E"
-            android:layout_below="@+id/tv_listitem"
-            android:layout_alignStart="@+id/tv_listitem"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:gravity="start"
-            android:text="listdescriotions">
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="@id/tv_listitem"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/tv_listitem"
+            app:layout_constraintTop_toBottomOf="@id/tv_listitem">
         </TextView>
 
         <ImageView
@@ -46,10 +48,15 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="43dp"
-            android:layout_marginEnd="50dp"
+            android:layout_marginEnd="16dp"
+            android:scaleType="fitXY"
             android:src="@drawable/menuitem"
-            android:scaleType="fitXY">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.929"
+            app:layout_constraintStart_toEndOf="@+id/tv_listitem"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.355">
         </ImageView>
-    </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
