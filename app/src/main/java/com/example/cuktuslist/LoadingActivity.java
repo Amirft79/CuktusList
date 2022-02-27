@@ -24,4 +24,16 @@ public class LoadingActivity extends AppCompatActivity {
         int num=20;
 
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        new Timer().schedule(new TimerTask() {
+            @Override
+            public void run() {
+                startActivity(new Intent(LoadingActivity.this,HomeActivity.class));
+            }
+        },3000);
+        int num=20;
+    }
 }

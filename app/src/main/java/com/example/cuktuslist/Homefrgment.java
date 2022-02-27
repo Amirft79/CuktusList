@@ -77,20 +77,31 @@ public class Homefrgment extends Fragment  {
                 final EditText Input_job=(EditText) dialog.findViewById(R.id.input_job);
                 final EditText Input_instructions=(EditText) dialog.findViewById(R.id.input_instructions);
                 Button btn_submit=(Button)dialog.findViewById(R.id.btn_submit);
-                btn_submit.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        TV_Instructions.setVisibility(View.GONE);
-                        Todolist todolist=new Todolist();
-                        todolist.setJob(Input_job.getText().toString().trim());
-                        todolist.setInstructions(Input_instructions.getText().toString().trim());
-                        db_helper.insertdata(todolist);
-                        todolistitem= db_helper.showdata();
-                        showlist();
-                        adaptor.notifyDataSetChanged();
-                        dialog.dismiss();
-                    }
-                });
+
+                    btn_submit.setOnClickListener(new View.OnClickListener() {
+                        @SuppressLint("NotifyDataSetChanged")
+                        @Override
+                        public void onClick(View view) {
+                            if (!Input_job.getText().toString().isEmpty()){
+                                btn_submit.setEnabled(true);
+                                TV_Instructions.setVisibility(View.GONE);
+                                Todolist todolist = new Todolist();
+                                todolist.setJob(Input_job.getText().toString().trim());
+                                todolist.setInstructions(Input_instructions.getText().toString().trim());
+                                db_helper.insertdata(todolist);
+                                todolistitem = db_helper.showdata();
+                                showlist();
+                                adaptor.notifyDataSetChanged();
+                                dialog.dismiss();
+
+                            }
+                            else if(Input_job.getText().toString().isEmpty()) {
+                                Input_job.setError("برنامه را وارد فرمایید");
+                            }
+
+                        }
+                    });
+
             }
         });
         showlist();

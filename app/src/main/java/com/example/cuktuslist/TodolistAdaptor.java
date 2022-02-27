@@ -150,17 +150,23 @@ public class TodolistAdaptor extends RecyclerView.Adapter<TodolistAdaptor.Viewho
         Input_job.setText(todolist.getJob());
         Input_instructions.setText(todolist.getInstructions());
         btn_submit.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("NotifyDataSetChanged")
             @Override
             public void onClick(View view) {
-                todolist.setJob(Input_job.getText().toString().trim());
-                todolist.setInstructions(Input_instructions.getText().toString().trim());
-                ContentValues values=new ContentValues();
-                values.put(Todolist.job_name,todolist.getJob());
-                values.put(Todolist.instructions_name,todolist.getInstructions());
-                values.put(Todolist.todoid_name,todolist.getTodoid());
-                db_helper.updateitem(todolist.getTodoid(),values);
-                notifyDataSetChanged();
-                dialog.dismiss();
+                 if (!Input_job.getText().toString().isEmpty()) {
+                     todolist.setJob(Input_job.getText().toString().trim());
+                     todolist.setInstructions(Input_instructions.getText().toString().trim());
+                     ContentValues values = new ContentValues();
+                     values.put(Todolist.job_name, todolist.getJob());
+                     values.put(Todolist.instructions_name, todolist.getInstructions());
+                     values.put(Todolist.todoid_name, todolist.getTodoid());
+                     db_helper.updateitem(todolist.getTodoid(), values);
+                     notifyDataSetChanged();
+                     dialog.dismiss();
+                 }
+                 else if(Input_job.getText().toString().isEmpty()) {
+                     Input_job.setError("برنامه را وارد فرمایید");
+                 }
             }
         });
 
